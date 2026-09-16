@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #101014;
+  --color-ink-soft: #1c1b21;
+  --color-bone: #f4efe4;
+  --color-bone-soft: #eae3d2;
+  --color-amber: #e8a722;
+  --color-amber-soft: #f3c869;
+  --color-signal: #ff4b39;
+  --color-line-dark: #35343c;
+  --color-line-light: #d8d2c2;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-bone: var(--color-bone);
+  --color-bone-soft: var(--color-bone-soft);
+  --color-amber: var(--color-amber);
+  --color-amber-soft: var(--color-amber-soft);
+  --color-signal: var(--color-signal);
+  --color-line-dark: var(--color-line-dark);
+  --color-line-light: var(--color-line-light);
+
+  --font-display: var(--font-bricolage), "Arial Black", sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+
+  --animate-marquee: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.loose-grid-bg {
+  background-image:
+    linear-gradient(to right, var(--color-line-dark) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-line-dark) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.loose-grid-bg-light {
+  background-image:
+    linear-gradient(to right, var(--color-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-line-light) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
