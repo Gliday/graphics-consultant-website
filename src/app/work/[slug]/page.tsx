@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects, projectImages, getProject } from "@/content/projects";
+import { LivingCover } from "@/components/LivingCover";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -59,16 +59,13 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
       </header>
 
       {cover && (
-        <div className="relative aspect-[16/10] w-full sm:aspect-[16/8]">
-          <Image
-            src={cover.src}
-            alt={`${project.title} — cover image`}
-            fill
-            sizes="100vw"
-            className="object-cover"
-            priority
-          />
-        </div>
+        <LivingCover
+          images={[cover]}
+          alt={`${project.title} — cover image`}
+          priority
+          sizes="100vw"
+          className="aspect-[16/10] w-full sm:aspect-[16/8]"
+        />
       )}
 
       <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
@@ -95,15 +92,14 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
         <div className="mx-auto max-w-6xl px-6 pb-16 sm:pb-24">
           <div className="grid gap-6 sm:grid-cols-2">
             {gallery.map((img, i) => (
-              <div key={img.src} className="relative aspect-[4/3] overflow-hidden bg-ink-soft">
-                <Image
-                  src={img.src}
-                  alt={`${project.title} — detail ${i + 2}`}
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
+              <LivingCover
+                key={img.src}
+                images={[img]}
+                alt={`${project.title} — detail ${i + 2}`}
+                offset={i}
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="aspect-[4/3] bg-ink-soft"
+              />
             ))}
           </div>
         </div>

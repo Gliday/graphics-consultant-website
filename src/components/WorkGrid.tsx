@@ -30,9 +30,14 @@ export function WorkGrid() {
         ))}
       </div>
 
-      <div className="mt-10 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-x-10 gap-y-16 lg:grid-cols-2">
         {filtered.map((project, i) => (
-          <ProjectCard key={project.slug} project={project} cover={projectImages(project.slug)[0]} index={i} />
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            images={projectImages(project.slug).slice(0, 4)}
+            index={i}
+          />
         ))}
       </div>
     </div>

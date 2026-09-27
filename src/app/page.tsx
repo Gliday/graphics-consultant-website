@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GridBackdrop } from "@/components/GridBackdrop";
 import { Reveal } from "@/components/Reveal";
 import { ProjectCard } from "@/components/ProjectCard";
+import { LivingCover } from "@/components/LivingCover";
 import { AvailabilityBadge } from "@/components/AvailabilityBadge";
 import { projects, projectImages } from "@/content/projects";
 import { services } from "@/content/services";
@@ -10,6 +11,7 @@ import { site } from "@/content/site";
 
 const featured = projects.filter((p) => p.featured).slice(0, 6);
 const logofolioImage = projectImages("logofolio")[0];
+const heroReel = featured.map((p) => projectImages(p.slug)[0]).filter(Boolean);
 
 export default function Home() {
   return (
@@ -50,6 +52,23 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
+
+        {heroReel.length > 0 && (
+          <Reveal index={4}>
+            <Link href="/work" className="group relative block">
+              <LivingCover
+                images={heroReel}
+                priority
+                sizes="100vw"
+                className="aspect-[3/4] w-full sm:aspect-[16/9] lg:aspect-[21/8]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-70" />
+              <span className="absolute bottom-6 left-6 inline-flex items-center gap-2 bg-amber px-4 py-2 font-display text-xs font-bold uppercase tracking-wider text-ink transition-colors group-hover:bg-amber-soft sm:left-8 sm:bottom-8">
+                Watch the work reel &rarr;
+              </span>
+            </Link>
+          </Reveal>
+        )}
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
@@ -61,10 +80,10 @@ export default function Home() {
             </Link>
           </div>
         </Reveal>
-        <div className="mt-10 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-x-10 gap-y-16 lg:grid-cols-2">
           {featured.map((project, i) => (
             <Reveal key={project.slug} index={i}>
-              <ProjectCard project={project} cover={projectImages(project.slug)[0]} index={i} />
+              <ProjectCard project={project} images={projectImages(project.slug).slice(0, 4)} index={i} />
             </Reveal>
           ))}
         </div>
