@@ -1,10 +1,11 @@
 export const site = {
-  name: "Loose Grid",
+  name: "YC Studio",
+  fullName: "YukaCreates Studio",
   byline: "The studio practice of Yuka Gliday",
   tagline: "An outcome of beautiful errors.",
   description:
-    "Loose Grid is the multidisciplinary design studio of Yuka Gliday — branding, art direction, UX/UI and graphic design for brands who want work with a point of view.",
-  url: "https://loosegrid.studio",
+    "YC Studio (YukaCreates) is the multidisciplinary design studio of Yuka Gliday — branding, art direction, UX/UI and graphic design for brands who want work with a point of view.",
+  url: "https://yukacreates.studio",
   email: "barnabasyuka@gmail.com",
   phone: "+254 717 850 546",
   phoneHref: "tel:+254717850546",

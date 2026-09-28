@@ -1,6 +1,6 @@
-# Loose Grid
+# YC Studio
 
-The portfolio website for **Loose Grid** — the design studio practice of Yuka Gliday (branding, art direction, UX/UI and graphic design).
+The portfolio website for **YC Studio** (YukaCreates) — the design studio practice of Yuka Gliday (branding, art direction, UX/UI and graphic design). Live at [yukacreates.studio](https://yukacreates.studio).
 
 ## Overview
 
@@ -68,6 +68,6 @@ docs/                   research, creative direction, design system and content 
 - `src/app/favicon.ico`, `src/app/icon.png`, `src/app/apple-icon.png`, `public/og-image.png` are programmatically generated on-brand placeholders, not a finished logomark.
 - Several open content questions are tracked in `docs/content-to-confirm.md` (contact details to publish, rate-card approach, a couple of unconfirmed case studies).
 
-## Deployment recommendation
+## Deployment
 
-This is a static-friendly Next.js app (all pages either fully static or statically generated via `generateStaticParams`). Recommended: **Vercel** (zero-config for Next.js) or **Netlify**. GitHub Pages is not recommended since it doesn't support Next.js's image optimisation route (`/_next/image`) without extra configuration.
+Deployed on **Vercel**, connected to this GitHub repo — every push to `main` redeploys automatically. Custom domain: `yukacreates.studio`.

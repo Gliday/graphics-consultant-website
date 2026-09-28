@@ -1,8 +1,10 @@
-# Creative Direction — Loose Grid (Yuka Gliday)
+# Creative Direction — YC Studio (Yuka Gliday)
+
+> **2026-09-28 update:** the brand name landed on **YC Studio** (full name "YukaCreates Studio", domain `yukacreates.studio`), replacing the working name "Loose Grid" used during initial direction-setting below. The "loose grid" *visual motif* (the broken hairline grid) is kept as a design-system device — see `design-system.md` — it's just no longer the brand's name. `site.name`/`site.fullName` in `src/content/site.ts` are the source of truth for current naming.
 
 ## Decisions locked in (2026-09-17)
 
-- **Brand name:** Loose Grid — a design-insider pun: a grid that's deliberately, confidently broken. Byline: "Loose Grid — the studio practice of Yuka Gliday."
+- **Brand name (superseded — see note above):** Loose Grid — a design-insider pun: a grid that's deliberately, confidently broken. Byline: "Loose Grid — the studio practice of Yuka Gliday."
 - **Positioning:** premium, multidisciplinary creative consultancy (branding, art direction, UX/UI, campaign/graphic design), not a mass-market template shop.
 - **Client work:** all confirmed shareable by name (Tusker, NCBA, Smirnoff, Dentsu "School of Influence", Beacon of Hope, Save The Elephants, Shopzetu, Uchumba, logofolio clients).
 - **Bio:** design-consultancy framing only (no music-producer angle).

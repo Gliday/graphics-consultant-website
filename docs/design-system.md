@@ -1,4 +1,6 @@
-# Design System — Loose Grid
+# Design System — YC Studio
+
+> Brand name is now **YC Studio** (yukacreates.studio) — "Loose Grid" below refers only to the recurring hairline-grid *visual motif*, which is unchanged.
 
 Implemented as CSS custom properties + Tailwind v4's CSS-first `@theme` in [globals.css](../src/app/globals.css).
 

@@ -1,4 +1,6 @@
-# Site Structure — Loose Grid
+# Site Structure — YC Studio
+
+> Brand name is now **YC Studio** (yukacreates.studio) — see `creative-direction.md` for the naming history; "Loose Grid" below was the working name.
 
 ## Pages
 
