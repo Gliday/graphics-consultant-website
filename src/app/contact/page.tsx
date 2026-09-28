@@ -26,11 +26,13 @@ export default function ContactPage() {
           </div>
           <div>
             <dt className="uppercase tracking-wider text-ink/50">Phone</dt>
-            <dd>
-              <a href={site.phoneHref} className="hover:text-amber">
-                {site.phone}
-              </a>
-            </dd>
+            {site.phones.map((phone) => (
+              <dd key={phone.href}>
+                <a href={phone.href} className="hover:text-amber">
+                  {phone.number}
+                </a>
+              </dd>
+            ))}
           </div>
           <div>
             <dt className="uppercase tracking-wider text-ink/50">Based in</dt>

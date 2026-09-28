@@ -33,11 +33,13 @@ export function Footer() {
                 {site.email}
               </a>
             </li>
-            <li>
-              <a href={site.phoneHref} className="hover:text-amber">
-                {site.phone}
-              </a>
-            </li>
+            {site.phones.map((phone) => (
+              <li key={phone.href}>
+                <a href={phone.href} className="hover:text-amber">
+                  {phone.number}
+                </a>
+              </li>
+            ))}
             <li className="text-bone/70">{site.location}</li>
           </ul>
         </div>

@@ -51,7 +51,7 @@ const structuredData = {
   },
   description: site.description,
   email: site.email,
-  telephone: site.phone,
+  telephone: site.phones[0].number,
   areaServed: "Kenya",
   url: site.url,
 };
