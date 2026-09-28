@@ -30,10 +30,7 @@ export default function Home() {
             </h1>
           </Reveal>
           <Reveal index={2}>
-            <p className="mt-8 max-w-xl text-lg text-bone/80">
-              {site.name} is the multidisciplinary design studio of Yuka Gliday &mdash; branding, art direction,
-              UX/UI and graphic design for brands who want work that holds up.
-            </p>
+            <p className="mt-8 max-w-xl text-lg text-bone/80">{site.description}</p>
           </Reveal>
           <Reveal index={3}>
             <div className="mt-10 flex flex-wrap gap-4">

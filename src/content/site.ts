@@ -4,7 +4,7 @@ export const site = {
   byline: "The studio practice of Yuka Gliday",
   tagline: "An outcome of beautiful errors.",
   description:
-    "YC Studio (YukaCreates) is the multidisciplinary design studio of Yuka Gliday — branding, art direction, UX/UI and graphic design for brands who want work with a point of view.",
+    "YC Studio aka Yuka Creates: is a multidisciplinary design practice building distinctive brand identities, sharp art direction, considered digital experiences, and graphic design made to last.",
   url: "https://yukacreates.studio",
   email: "glidayyuka96@gmail.com",
   phones: [
